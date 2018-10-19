@@ -1,15 +1,13 @@
 package com.sawcao.beanoperation.copier;
 
-import java.lang.reflect.Field;
 
 public class CloningStrategyFactory {
-	public static ICloningStrategy annotatedField(final Class annotationClass, final ICloningStrategy.Strategy strategy) {
-		return new ICloningStrategy() {
-			public Strategy strategyFor(Object toBeCloned, Field field) {
-				if (toBeCloned == null) return Strategy.IGNORE;
-				if (field.getDeclaredAnnotation(annotationClass) != null) return strategy;
-				return Strategy.IGNORE;
-			}
+
+	public static ICloningStrategy annotatedField(final ICloningStrategy.Strategy strategy) {
+		return (toBeCloned, field) -> {
+			if (toBeCloned == null) return ICloningStrategy.Strategy.IGNORE;
+			if (field.getDeclaredAnnotation(CloneIngnore.class) != null) return strategy;
+			return ICloningStrategy.Strategy.IGNORE;
 		};
 	}
 
