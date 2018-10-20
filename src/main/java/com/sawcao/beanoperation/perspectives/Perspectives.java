@@ -46,8 +46,8 @@ public class Perspectives
 	}
 
 	/**
-	 * Sample: if o is a [ Products extends LinkedList<Product> ] then the returned instance 
-	 * is a [ OrderedProducts extends LinkedList<OrderedProduct> ].
+	 * Sample: if o is a [ Products extends LinkedList then the returned instance
+	 * is a [ OrderedProducts extends LinkedList].
 	 * 
 	 * View a collection o from the perspective of collection E.
 	 * 

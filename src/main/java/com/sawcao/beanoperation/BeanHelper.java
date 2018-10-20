@@ -332,9 +332,7 @@ public class BeanHelper {
 	}
 
 	/**  
-	 * @author caorui  
-	 * @param
-	 * @return void  
+	 * @author caorui
 	 */  
 	public void deepCloneDiffClass(Object src, Object dest){
 		if (src != null)
@@ -577,8 +575,8 @@ public class BeanHelper {
 	/**
 	 * copies all properties from src to dest. Src and dest can be of different class, provided they contain same field names/types
 	 *
-	 * @param src  the source object
-	 * @param dest the destination object which must contain as minimum all the fields of src
+	 * param src  the source object
+	 * param dest the destination object which must contain as minimum all the fields of src
 	 */
 	public <T, E extends T> void copyPropertiesOfInheritedClass(final T src, final E dest) {
 		if (src == null) throw new IllegalArgumentException("src can't be null");
@@ -653,7 +651,7 @@ public class BeanHelper {
 	 * setDumpCloned() if you want to control where to print the cloned
 	 * classes.
 	 *
-	 * @param dumpClonedClasses true to enable printing all cloned classes
+	 * dumpClonedClasses true to enable printing all cloned classes
 	 */
 	public void setDumpClonedClasses(final boolean dumpClonedClasses) {
 		if (dumpClonedClasses) {
